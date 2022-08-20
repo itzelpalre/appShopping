@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="bg-white overflow-hidden shadow-xl sm:rounded-lg container">
     <h2>Dar de alta Contenido</h2>
     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -18,6 +18,15 @@
         <div class="mb-3">
             <label for="observaciones" class="form-label">Observaciones</label>
             <input type="text" class="form-control" name="observaciones">
+        </div>
+
+        <div class="mb-3">
+            <label for="imagenurl" class="form-label">Categoria</label>
+            <select name="categorias">
+                @foreach($categorias as $row)
+                <option>{{$row->nombre}}</option>
+                @endforeach
+            </select>
         </div>
 
         <div class="mb-3">

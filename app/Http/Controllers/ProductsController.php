@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Categoria;
 
 class ProductsController extends Controller
 {
@@ -17,7 +18,9 @@ class ProductsController extends Controller
     
     public function create() {
 
-        return view('layouts/products/create');
+        $categorias = Categoria::all();
+
+        return view('layouts/products/create', compact('categorias'));
 
     }
 
@@ -27,6 +30,7 @@ class ProductsController extends Controller
             'nombre' => $request->get('nombre'),
             'descripcion' => $request->get('descripcion'),
             'observaciones' => $request->get('observaciones'),
+            'categoria' => $request->get('categorias'),
         ]);
 
         if($request->hasFile('imagenurl')){
@@ -57,8 +61,9 @@ class ProductsController extends Controller
     public function edit($id) {
 
         $product = Product::find($id);
+        $categorias = Categoria::all();
 
-        return view('layouts/products/edit', compact('product'));
+        return view('layouts/products/edit', compact('product', 'categorias'));
 
     }
 

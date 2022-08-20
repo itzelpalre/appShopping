@@ -11,13 +11,12 @@ class BuscadorController extends Controller
   {
 
     $categoria = $request->get('categoria');
-    
 
     $categorias = Categoria::orderBy('id', 'ASC')
                 ->name($categoria)
                 ->paginate(4);
 
-    return view('layouts/categorias/index', compact('categorias'));
+    return view('layouts/categorias/index', compact('categorias')); 
 
   }
 }

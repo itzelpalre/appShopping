@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\BuscadorController;
+use App\Http\Controllers\BuscadorProductsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PDFController;
@@ -41,6 +42,7 @@ Route::resource('editarCategoria', CategoriasController::class);
 
 //Buscador
 Route::resource('buscarCategoria', BuscadorController::class);
+Route::resource('buscarProducto', BuscadorProductsController::class);
 
 //Ruta Contenido
 Route::get('/productos', [ ProductsController::class, 'index'])

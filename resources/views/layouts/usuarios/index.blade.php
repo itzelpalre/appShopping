@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row align-items-center">
     <div class="col-8 bg-white ">
-      <h2>Agregar Usuario</h2>
+      <h2>¿Deseas agregar un usuario?</h2>
       <form action="{{ route('users.store') }}" method="POST">
       @csrf
       <div class="mb-3">

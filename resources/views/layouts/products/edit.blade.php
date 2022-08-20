@@ -22,6 +22,15 @@
         </div>
 
         <div class="mb-3">
+            <label for="imagenurl" class="form-label">Categoria</label>
+            <select name="categorias">
+                @foreach($categorias as $row)
+                <option>{{$row->categoria}}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label for="imagenurl" class="form-label">Imagen Principal</label>
             <input type="text" class="form-control" name="imagenurl" value="{{ $product->imagenurl }}">
         </div>

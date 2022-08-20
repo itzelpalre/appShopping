@@ -2,6 +2,8 @@
 
 @section('content')
 <div class="container">
+    <div class="row">
+    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg container">
     <h2>Dar de alta Categoria</h2>
     <form action="{{ route('categorias.store') }}" method="POST">
         @csrf
@@ -17,5 +19,7 @@
 
         <button type="submit" class="btn btn-primary">Crear</button>
     </form>
+</div>
+</div>
 </div>
 @endsection

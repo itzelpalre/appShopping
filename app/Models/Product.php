@@ -14,6 +14,15 @@ class Product extends Model
         'descripcion',
         'observaciones',
         'imagenurl',
-        'contenido'
+        'contenido',
+        'categoria'
     ];
+
+    public function scopeName($query, $name)
+    {
+      if($name)
+            return $query->where('nombre', 'LIKE', "%$name%")
+                         ->orWhere('descripcion', 'LIKE', "%$name%")
+                         ->orWhere('categoria', 'LIKE', "%$name%");
+    }
 }

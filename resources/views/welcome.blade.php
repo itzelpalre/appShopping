@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>App Mandaditos</title>
+        <title>App Shopping</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,13 +31,13 @@
                     <img src="images/featureds/logo.svg" alt="logo" width="250">
                     <h2>App Shopping</h2>
                     <div class="card-body bg-white" style="padding: 15px 20px;">
-                    <h4>Introduzca sus datos de acceso</h4>
+                    <h4>Introduzca sus datos de acceso
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <input id="email" type="email" style="border: 1px solid;" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" style="border: 1px solid;" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 <br>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Recordarme') }}
                                     </label>
                                 </div>
                             </div>
@@ -73,13 +73,13 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                <button type="submit" class="btn btn-primary" style="background-color: #053570; color: #fff; padding: 10px 15px;">
+                                    {{ __('Iniciar sesion') }}
                                 </button>
-
+                                <br>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('¿Olvidaste tu contraseña?') }}
                                     </a>
                                 @endif
                             </div>

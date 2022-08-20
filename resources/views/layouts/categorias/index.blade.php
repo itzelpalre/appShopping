@@ -23,7 +23,6 @@
 <table class="table table-hover">
 <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Acciones</th>
@@ -36,7 +35,6 @@
     <!-- Buscar por Descripcion -->
     @foreach ($categorias as $row)
     <tr>
-      <th scope="row">{{ $row->id }}</th>
       <td>{{ $row->nombre }}</td>
       <td>{{ $row->descripcion }}</td>
       <td>
