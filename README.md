@@ -1,64 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+APP SHOPPING POR ITZEL C. PALMA REYES
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+El objetivo es crear un aplicativo con la funcionalidad de agregar, editar, buscar, listar y filtrar ciertos productos de supermercado para una gestión intuitiva y amigable para el administrador de un mini super.
 
-## About Laravel
+El link de Git Hub es: https://github.com/itzelpalre/appShopping
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+En los siguientes apartados se describen los puntos trabajados en el aplicativo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Requisitos mínimos del sistema
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2.1 Configuración del programa
+El programa tendrá una parte para definir la configuración.
+En esta parte se definirán aspectos a configurar de la aplicación:
+- Conexión a la base de datos
 
-## Laravel Sponsors
+La configuración se encuentra en el archivo .env, donde se indica la conexión a la base de datos y también en el repositorio de Git Hub se encuentra la base de datos a importar appLaravel.sql
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Otras configuraciones, por ejemplo, envío de correos
 
-### Premium Partners
+Para la configuración de envíos de correo, se realiza en el archivo .env, para el aplicativo App Shopping, se realizó en una cuenta gratuita de mail trap
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.2 Acceso al programa
 
-## Code of Conduct
+Para acceder al programa se pedirá usuario y contraseña, si no es correcto no dejará continuar y si es correcto accede al programa.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Nota: Aquí está el acceso de un usuario generado
+Introduzca sus datos de acceso
+Usuario: itzelpalmareyes@gmail.com
+Password: 12345678
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+El programa contendrá un menú en el cual podremos acceder a las diferentes partes del mismo:
 
-## License
+● Gestión de usuarios
+● Gestión de categorías
+● Gestión de contenido
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+2.3 Gestión de usuarios
+
+Podremos dar de alta usuarios, indicando el nombre de usuario, email y contraseña. Al arrancar el programa nos pedirá usuario y contraseña para acceder.
+
+
+
+2.4 Gestión de categorías
+
+Se podrá listar, consultar, modificar, borrar o dar de alta varias categorías, indicando nombre y descripción.
+
+Pantalla principal del ítem Gestion de Categorias
+
+
+
+Pantalla alta de categoría
+
+
+Pantalla editar categoría
+
+
+
+2.5 Gestión de contenido
+
+Se podrá listar, consultar, modificar, borrar o dar de alta el contenido elegido, indicando algunos datos del tema elegido. Como mínimo tendrá que contener:
+
+- Nombre
+- Descripción
+- Observaciones
+- Imagen principal
+- Contenido multimedia, podremos cargar para cada elemento diferentes archivos multimedia (ficheros, fotos, audio y/o vídeo)
+
+
+
+
+
+Los resultados obtenidos lo podremos exportar (Pdf o Excel)
+
+Visualización del contenido: Tendremos un buscador para listar y localizar uno o varios elementos. Podremos buscar por los campos más relevantes nombre y descripción, así como indicarle una categoría en concreto.
+
+Al elegir un elemento podremos acceder a su ficha y ver todos sus datos, así como ver su contenido multimedia y visualizarlo/reproducirlo.
+
+En la ficha podremos modificar, añadir o borrar contenido multimedia.
+
+3 Requisitos opcionales del sistema a desarrollar
+
+Otros requisitos a desarrollar podrían ser:
+
+- Permisos: cada usuario poder definir los permisos a cada parte de la aplicación.
+
+- Cambio de contraseña. El usuario podrá una vez logueado cambiar su contraseña.
+
+- Recuperación de contraseña. Si el usuario se olvida la contraseña, podrá recuperarla.
+
+- Envío de datos del contenido por email, una vez escogido un contenido poder enviar por email una ficha del mismo, indicando el nombre y descripción y adjuntando los ficheros multimedia.
+
+- Importación de contenido mediante automatización a través de Excel y otros medios.
+
+
