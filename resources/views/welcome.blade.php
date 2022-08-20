@@ -74,7 +74,7 @@
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary" style="background-color: #053570; color: #fff; padding: 10px 15px;">
-                                    {{ __('Iniciar sesion') }}
+                                    {{ __('Inicio de sesion sesion') }}
                                 </button>
                                 <br>
                                 @if (Route::has('password.request'))
