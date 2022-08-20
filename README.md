@@ -23,3 +23,6 @@ php artisan key:generate
 
 <b>8.- GLevantar el servidor del aplicativo con el siguiente comando</b>
 php artisan serve
+
+<b>9.- Para mas detalles del funcionamiento ver doc</b>
+https://docs.google.com/document/d/1hHHMO2Yj5zbyYwxO5RUxcgbW5XuR7eiF9VBsZCeqz7w/edit?usp=sharing
