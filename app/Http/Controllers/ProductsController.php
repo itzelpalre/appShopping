@@ -62,7 +62,6 @@ class ProductsController extends Controller
 
         $product = Product::find($id);
         $categorias = Categoria::all();
-
         return view('layouts/products/edit', compact('product', 'categorias'));
 
     }
@@ -70,8 +69,11 @@ class ProductsController extends Controller
     public function update(Request $request, $id) {
 
         $product = Product::find($id);
+        $product->categoria = $request->get('categorias');
 
         $product->update($request->all());
+   
+        $product->update();
 
         return redirect()->route('productos.index');
 

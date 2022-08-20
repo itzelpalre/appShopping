@@ -25,7 +25,7 @@
             <label for="imagenurl" class="form-label">Categoria</label>
             <select name="categorias">
                 @foreach($categorias as $row)
-                <option>{{$row->categoria}}</option>
+                <option value="{{$row->nombre}}">{{$row->nombre}}</option>
                 @endforeach
             </select>
         </div>
