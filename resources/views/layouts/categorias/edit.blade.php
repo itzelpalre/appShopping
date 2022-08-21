@@ -7,7 +7,7 @@
         @csrf
         @method('put')
         <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
+            <label for="nombre" class="form-label">Categoria</label>
             <input type="text" class="form-control" name="nombre" value="{{ $categoria->nombre }}">
         </div>
 
