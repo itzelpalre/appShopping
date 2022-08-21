@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Estas  logueado App Shopping') }}
+                    {{ __('Estas  logueado') }}
                 </div>
             </div>
         </div>
