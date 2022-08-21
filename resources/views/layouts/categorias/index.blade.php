@@ -19,41 +19,25 @@
 
 <br>
 
-<div class="bg-white overflow-hidden shadow-xl sm:rounded-lg container">
-<table class="table table-hover">
-<thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Descripcion</th>
-      <th scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Buscar por Categoria -->
-    
-
-    <!-- Buscar por Descripcion -->
-    @foreach ($categorias as $row)
-    <tr>
-      <td>{{ $row->nombre }}</td>
-      <td>{{ $row->descripcion }}</td>
-      <td>
-        <form style="float: left; margin: 0 5px;" action="{{ route('eliminarCategoria.destroy', $row->id) }}" method="POST">
-          @csrf
-          @method('delete')
-          <button class="btn btn-danger">Eliminar</button>
-        </form>
-      
-        <a href="{{ route('editarCategoria.edit', $row->id) }}">  
-          <button type="button" class="btn btn-warning">Editar</button>
-        </a>
-
-      </td>
-    </tr>
-
-    @endforeach
-  </tbody>
-
-</table>
+<!-- Cards Categorias-->
+<div class="container">
+<div class="row">
+@foreach ($categorias as $row)
+<div class="card" style="width: 18rem; margin:15px;">
+  <div class="card-body">
+    <h5 class="card-title"><b>Categoria</b> | {{ $row->nombre }}</h5>
+    <p class="card-text">{{ $row->descripcion }}</p>
+    <a href="{{ route('editarCategoria.edit', $row->id) }}">  
+      <button type="button" class="btn btn-warning">Editar</button>
+    </a>
+    <form style="float: left; margin: 0 5px;" action="{{ route('eliminarCategoria.destroy', $row->id) }}" method="POST">
+      @csrf
+      @method('delete')
+      <button class="btn btn-danger">Eliminar</button>
+    </form>
+  </div>
+</div>
+@endforeach
+</div>
 </div>
 @endsection

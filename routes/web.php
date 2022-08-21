@@ -58,6 +58,13 @@ Route::resource('eliminarCont', ProductsController::class);
 
 Route::resource('editarCont', ProductsController::class);
 
+//Editar Password
+Route::get('/editPassword', [ UsuariosController::class, 'password'])
+->name('editPassword');
+
+Route::post('/updatePassword', [ UsuariosController::class, 'updatePassword'])
+->name('updatePassword');
+
 //Ruta PDF
 Route::get('/pdf', [ PDFController::class, 'PDF'])
 ->name('descargarPDF');

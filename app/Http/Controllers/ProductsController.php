@@ -88,4 +88,8 @@ class ProductsController extends Controller
         return redirect()->route('productos.index');
 
     }
+
+    public function detalles($id) {
+        return $id;
+    }
 }
